@@ -2,18 +2,16 @@ package com.rohit.opencamera;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity  implements View.OnClickListener {
 
     private static final int CAMERA_PIC_REQUEST = 101;
     private ImageView mImageView;
-    private Button mButtonOpenCamera;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +21,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         mImageView = findViewById(R.id.imageView);
 
 
-        mButtonOpenCamera = findViewById(R.id.button_camera);
+        Button mButtonOpenCamera = findViewById(R.id.button_camera);
         mButtonOpenCamera.setOnClickListener(this);
     }
 
@@ -43,4 +41,5 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
             mImageView.setImageBitmap(image);
         }
     }
+
 }
